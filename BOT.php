@@ -1,5 +1,5 @@
 <?php // callback.php
-require "vendor/autoload.php";
+require_once('./vendor/autoload.php');
 #Namespace
 use \LINE\LINEBot\HttPClient\CurlHTTPClient;
 use \LINE\LINEBot;
