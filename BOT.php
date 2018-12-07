@@ -15,7 +15,7 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
   foreach ($events['events'] as $event) {
     if($event['type']=='message'){
-      switch($event['type']=='message'){
+      switch($event['message']['type']){
           case'text':
           $replyToken = $event['replyToken'];
           $respMessage ='Hello, your message is '.$event['message']['text'];
