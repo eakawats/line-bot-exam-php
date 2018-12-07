@@ -5,8 +5,8 @@ use \LINE\LINEBot\HttPClient\CurlHTTPClient;
 use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder;
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
-$channel_token = 'UOeO9ZUwN4dTOpFqTnduO6vtbNy2+4+dpPbggF6b/fXpN5KQJunVpHLbbR8kSzOlKvbceXmLJREc2uSSkRFmvR2MfEkZnlG/vy4vxg9ptFjK2+NpPcKH4RkGV1TyMdHV1+gCjrsrs5CwGNjgwQuxKgdB04t89/1O/w1cDnyilFU=';
-$channel_secret = 'cffec1626cfe1853d2a472d2e6b83ce9';
+$channel_token = 'OT5CR0YWH4DUiCp3duCWPArMVPQJkebSmBzhptk6y+juD0wG1AqDTDwda7kdVsaxkdZvXgF+vnb3UakBpc1pU1tgS2GqPD5nQl0n3uZo53/Ll2TY2b3vvE5As/B3YEOnQbRmpV3c9oj2OxoaTvEgPAdB04t89/1O/w1cDnyilFU=';
+$channel_secret = '41876669dc9e269ce3b2c5e26bbdf5da';
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
