@@ -1,7 +1,5 @@
 <?php
 
-
-
 require "vendor/autoload.php";
 
 $access_token = 'OT5CR0YWH4DUiCp3duCWPArMVPQJkebSmBzhptk6y+juD0wG1AqDTDwda7kdVsaxkdZvXgF+vnb3UakBpc1pU1tgS2GqPD5nQl0n3uZo53/Ll2TY2b3vvE5As/B3YEOnQbRmpV3c9oj2OxoaTvEgPAdB04t89/1O/w1cDnyilFU=';
@@ -17,6 +15,8 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+
+?>
 
 
 
