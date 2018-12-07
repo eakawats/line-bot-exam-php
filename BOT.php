@@ -1,7 +1,7 @@
 <?php // callback.php
 require_once('./vendor/autoload.php');
 #Namespace
-use \LINE\LINEBot\HttPClient\CurlHTTPClient;
+use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
           $replyToken = $event['replyToken'];
           $respMessage ='Hello, your message is '.$event['message']['text'];
           
-          $httpClient=newCurlHttpClient($channel_token);
+          $httpClient=newCurlHTTPClient($channel_token);
           $bot=newLINEBot($HttpClient, array('channelSelect'=> $channel_secret));
           $textMessageBuilder = newTextMessageBuilder($respMesage);
           $response=$bot->replyMessage($replyToken, $textMessageBuilder);
