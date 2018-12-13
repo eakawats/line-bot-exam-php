@@ -12,13 +12,14 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  $message = $arrayJson['events'][0]['message']['text'];
  
-if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
+if($message == "สวัสดี"){
 //  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
  replyMsg($arrayHeader,$arrayPostData);
-}else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
+}
+else if($message == "ชื่ออะไร"){
  // $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
@@ -32,7 +33,7 @@ else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
  replyMsg($arrayHeader,$arrayPostData);
 }
-else if($arrJson['events'][0]['message']['text'] == "รัก"){
+else if($message == "รัก"){
  // $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
