@@ -52,7 +52,7 @@ else{
   $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
 }
  
-  function pushMsg($arrayHeader,$arrayPostData){
+  function replyMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
