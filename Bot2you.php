@@ -28,7 +28,7 @@
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูปภรรยา"){
        // $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
-       $image_url = "https://www.facebook.com/photo.php?fbid=1914304808589314&set=a.468401249846351&type=3&theater"
+       $image_url = "https://www.facebook.com/photo.php?fbid=1914304808589314&set=a.468401249846351&type=3&theater";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
