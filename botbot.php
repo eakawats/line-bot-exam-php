@@ -30,7 +30,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 else if($arrJson['events'][0]['message']['text'] == "พิกัดสยามพารากอน"){
        $arrPostData = array();
        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "location";
+        $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['title'] = "สยามพารากอน";
  /*       $arrayPostData['messages'][0]['address'] =   "13.7465354,100.532752";
         $arrayPostData['messages'][0]['latitude'] = "13.7465354";
