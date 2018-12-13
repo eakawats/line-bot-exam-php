@@ -36,7 +36,7 @@ else if($arrJson['events'][0]['message']['text'] == "รัก"){
 }
 else if($message == "พิกัดสยามพารากอน"){
  $arrPostData = array();
- $arrHeader = array();
+ //$arrHeader = array();
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "สยามพารากอน";
