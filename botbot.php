@@ -10,31 +10,36 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+ $message = $arrayJson['events'][0]['message']['text'];
  
 if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
-  $arrPostData = array();
+//  $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+ replyMsg($arrayHeader,$arrayPostData);
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
-  $arrPostData = array();
+ // $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
+ replyMsg($arrayHeader,$arrayPostData);
 }
 else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
-  $arrPostData = array();
+ // $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+ replyMsg($arrayHeader,$arrayPostData);
 }
 else if($arrJson['events'][0]['message']['text'] == "รัก"){
-  $arrPostData = array();
+ // $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ให้แม่มาขอ";
+ replyMsg($arrayHeader,$arrayPostData);
 }
-/*else if($message == "พิกัดสยามพารากอน"){
+else if($message == "พิกัดสยามพารากอน"){
 // $arrPostData = array();
  //$arrHeader = array();
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -44,16 +49,17 @@ else if($arrJson['events'][0]['message']['text'] == "รัก"){
         $arrayPostData['messages'][0]['latitude'] = "13.7465354";
         $arrayPostData['messages'][0]['longitude'] = "100.532752";
         replyMsg($arrayHeader,$arrayPostData);
-    }*/
+    }
 else{
-  $arrPostData = array();
+ //$arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
+  replyMsg($arrayHeader,$arrayPostData);
 }
  
- //function replyMsg($arrayHeader,$arrayPostData){
-//      $strUrl = "https://api.line.me/v2/bot/message/push";
+ function replyMsg($arrayHeader,$arrayPostData){
+     $strUrl = "https://api.line.me/v2/bot/message/push";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
@@ -64,7 +70,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
-//}
-  // exit;
+}
+  exit;
  
 ?>
