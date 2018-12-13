@@ -43,7 +43,7 @@ else if($message == "พิกัดสยามพารากอน"){
         $arrayPostData['messages'][0]['address'] =   "13.7465354,100.532752";
         $arrayPostData['messages'][0]['latitude'] = "13.7465354";
         $arrayPostData['messages'][0]['longitude'] = "100.532752";
-      //  replyMsg($arrayHeader,$arrayPostData);
+        replyMsg($arrayHeader,$arrayPostData);
     }
 else{
   $arrPostData = array();
