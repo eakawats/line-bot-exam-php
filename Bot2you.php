@@ -27,7 +27,7 @@
     }
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูป"){
-        $image_url = 'https://drive.google.com/file/d/1bOWQeQoyYjVZ1TGQLYWZjNNWVT0WT5vsOQ/view?usp=sharing';
+        $image_url = 'https://www.dropbox.com/home/picture?preview=316424.jpg';
        //$image_url = "https://www.picz.in.th/image/2.9zptwa";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
