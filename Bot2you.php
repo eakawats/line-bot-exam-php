@@ -26,8 +26,8 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Image"
-    else if($message == "รูป"){
-        $image_url = 'https://i.ibb.co/DVFMFfw/315663-lucky.jpg';
+    else if($message == "รูปภรรยา"){
+        $image_url = 'https://i.ibb.co/bP3ZxGf/30656664-1871434909542971-8600622862929231872-n.jpg';
        //$image_url = "https://www.picz.in.th/image/2.9zptwa";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
