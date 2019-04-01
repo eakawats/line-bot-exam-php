@@ -45,6 +45,16 @@
         $arrayPostData['messages'][0]['longitude'] = "100.532752";
         replyMsg($arrayHeader,$arrayPostData);
     }
+        #ตัวอย่าง Message Type "Location11"
+    else if($message == "พิกัดกปภ.ข4"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "location";
+        $arrayPostData['messages'][0]['title'] = "กปภ.ข4";
+        $arrayPostData['messages'][0]['address'] =   "9.1125639,99.2877582";
+        $arrayPostData['messages'][0]['latitude'] = "9.1125639";
+        $arrayPostData['messages'][0]['longitude'] = "99.2877582";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
